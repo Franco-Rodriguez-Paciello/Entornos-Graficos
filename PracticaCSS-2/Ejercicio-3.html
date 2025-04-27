@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p class="desarrollo">
+        En este primer párrafo trataremos lo siguiente:
+        <br/>xxxxxxxxxxxxxxxxxxxxxxxxx
+    </p>
+
+    <div>
+        Se aplica la regla `*.desarrollo`, que establece:
+        - Tamaño de fuente de 8px.
+        Aplicando el estilo solo a los elementos con la clase `desarrollo`.
+    </div>
+    <br/>
+
+    <p class="quitar">
+        Este párrafo debe ser quitado de la obra…
+        <br/>xxxxxxxxxxxxxxxxxxxxxxxxx
+    </p>
+
+    <div>
+        Se aplica la regla `p.quitar`, que establece:
+        - Color del texto: rojo.
+        Afecta solamente a los párrafos (`<p>`) que tengan la clase `quitar`, resaltándolos visualmente en rojo.
+    </div>
+    <br/>
+
+    <p>
+        En este otro párrafo trataremos otro tema:<br />
+        xxxxxxxxxxxxxxxxxxxxxxxxx
+    </p>
+
+    <div>
+        No se aplica ninguna regla de CSS específica a este párrafo porque no tiene ninguna clase asociada.
+    </div>
+    <br/>
+
+    <p class="importante">
+        Y este es el párrafo más importante de la obra…
+        <br />xxxxxxxxxxxxxxxxxxxxxxxxx
+     </p>
+
+    <div>
+        Se aplica la regla `.importante`, que establece:
+        - Tamaño de fuente de 20px.
+        Destaca el parrafo.
+    </div>
+
+        <h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+
+        <div>
+            En el encabezado `<h1>
+                ` con clase `quitar`, se aplica:
+                - Color del texto: rojo.
+                Así se marca que el encabezado también debe ser eliminado o corregido.
+        </div>
+        <br/>
+
+    <p class="quitar importante">Se pueden aplicar varias clases a la vez</p>
+
+    <div>
+        <div>
+            En este párrafo se aplican dos reglas al mismo tiempo:
+            - De `quitar`: color de texto rojo.
+            - De `importante`: tamaño de fuente de 20px.
+            El párrafo queda en rojo y grande, combinando los efectos de ambas clases simultáneamente.
+        </div>
+    </div>
+    <br />
+</body>
+
+<style>
+    p.quitar {
+        color: red;
+    }
+
+    *.desarrollo {
+        font-size: 8px;
+    }
+
+    .importante {
+        font-size: 20px;
+    } 
+</style>
+</html>

@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <p id="normal">Este es un párrafo</p><br>
+
+    <div>
+        Se aplica la regla `p#normal`, que establece:
+        - Fuente: Arial o Helvetica.
+        - Tamaño de fuente: 11px.
+        - Texto en negrita (bold).
+        Esto afecta únicamente al párrafo con `id="normal"`
+    </div>
+    <br>
+
+    <p id="destacado">Este es otro párrafo</p><br>
+
+    <div>
+        Se aplica la regla `*#destacado`, que establece:
+
+        - Borde sólido de color azul.
+        - Ancho del borde: 2px.
+
+        Esta regla afecta a cualquier elemento que tenga `id="destacado"`, en este caso al párrafo, agregándole un borde azul.
+    </div>
+    <br>
+
+    <table id="destacado"><tr><td>Esta es una tabla</td></tr></table><br>
+
+    <div>
+        También se aplica la regla `*#destacado` a esta tabla, debido a que su `id="destacado"`.
+
+        - Se genera un borde sólido azul de 2px de grosor alrededor de toda la tabla.
+
+        Esto resalta visualmente el contenido de la tabla respecto al resto de la página.
+    </div>
+    <br>
+
+    <p id="distinto">Este es el último párrafo</p><br>
+    <div>
+        <!-- Cuarto div -->
+        Se aplica la regla `#distinto`, que establece:
+
+        - Color de fondo: celeste claro (`#9EC7EB`).
+        - Color del texto: rojo.
+
+        Esta regla afecta únicamente al párrafo con `id="distinto"`, dándole un fondo destacado y texto rojo.
+    </div>
+    <br>
+</body>
+
+<style>
+    p#normal {
+        font-family: arial,helvetica;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+    *#destacado {
+        border-style: solid;
+        border-color: blue;
+        border-width: 2px;
+    }
+
+    #distinto {
+        background-color: #9EC7EB;
+        color: red;
+    }
+</style>
+</html>
