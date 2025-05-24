@@ -59,3 +59,46 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Docker
+
+    docker-compose run --rm app composer create-project laravel/laravel .
+    docker-compose run --rm app php artisan key:generate
+
+
+Verificar si los contenedores están corriendo
+    docker ps
+
+Levantar la app
+    docker-compose up -d
+
+Reiniciá Laravel
+    docker-compose restart app
+
+Reiniciá Docker
+    docker-compose down
+    docker-compose up -d --build
+
+## Breeze
+
+    docker-compose run --rm app composer require laravel/breeze --dev
+    docker-compose run --rm app php artisan breeze:install blade
+    docker-compose run --rm app npm install
+    docker-compose run --rm app npm run build
+
+    docker-compose run --rm app php artisan route:list
+
+
+## Limpiar cachés de Laravel
+
+    php artisan config:clear
+    php artisan route:clear
+    php artisan view:clear
+    php artisan cache:clear
+    php artisan optimize:clear
+
+## Migraciones 
+
+    docker-compose run --rm app php artisan migrate
+    docker-compose run --rm app php artisan db:seed
