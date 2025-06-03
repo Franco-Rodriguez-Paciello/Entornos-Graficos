@@ -19,7 +19,16 @@ services:
       - DB_DATABASE=laravel
       - DB_USERNAME=root
       - DB_PASSWORD=root
-
+    # PENDIENTE DE TESTO
+    #   command: |
+    #   bash -c "
+    #     composer require laravel/breeze --dev &&
+    #     php artisan breeze:install blade &&
+    #     npm install &&
+    #     npm run build &&
+    #     php artisan route:list &&
+    #     php-fpm
+    #   "
   db:
     image: mysql:8
     container_name: mysql-db
