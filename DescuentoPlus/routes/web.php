@@ -18,6 +18,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('users', UserController::class)->names('users');
+
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+
+    Route::put('/users/{user}/update-role', [UserController::class, 'updateRole'])->name('users.updateRole');
+    Route::put('/users/{user}/toggle-active', [UserController::class, 'toggleActive'])->name('users.toggleActive');
     //->parameters(['user' => 'id'])
 });
 

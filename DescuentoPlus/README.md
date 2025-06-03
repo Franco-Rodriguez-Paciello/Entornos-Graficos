@@ -102,3 +102,33 @@ Reiniciá Docker
 
     docker-compose run --rm app php artisan migrate
     docker-compose run --rm app php artisan db:seed
+
+## DB
+
+    docker exec -it mysql-db bash
+    mysql -u root -p
+
+    SHOW DATABASES;
+    USE tu_base_de_datos;
+    SHOW TABLES;
+    DESCRIBE nombre_de_tabla;
+
+## DBEAVER
+ db:
+    image: mysql:8
+    container_name: mysql-db
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+
+      DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=root
+    DB_PASSWORD=root
