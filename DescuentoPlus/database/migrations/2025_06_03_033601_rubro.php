@@ -9,19 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
-{
-    Schema::table('users', function (Blueprint $table) {
-        $table->string('role')->default('cliente'); // cliente, dueno, admin
-    });
-}
+    public function up(): void
+    {
+       Schema::create('rubro', function (Blueprint $table) {
+            $table->id();
+            $table->string('descripcion');
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+         Schema::table('rubro', function (Blueprint $table) {
             //
         });
     }
