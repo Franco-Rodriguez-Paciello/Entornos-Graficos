@@ -32,7 +32,7 @@
                 </div>
                 <div class="flex justify-between">
                     <a href="{{ route('rubros.index') }}" class="text-gray-600 hover:underline">Cancelar</a>
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button type="submit" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded">
                         Guardar
                     </button>
                 </div>
