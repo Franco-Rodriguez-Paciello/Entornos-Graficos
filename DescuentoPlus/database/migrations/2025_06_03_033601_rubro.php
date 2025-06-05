@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create('rubro', function (Blueprint $table) {
+       Schema::create('rubros', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
+             $table->boolean('is_active')->default(true);
+             $table->timestamps();
         });
     }
 

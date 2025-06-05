@@ -83,6 +83,8 @@ Reiniciá Docker
     docker-compose down
     docker-compose up -d --build
 
+    docker-compose run --rm app php artisan migrate:fresh --seed^C
+
 ## Breeze
 
     docker-compose run --rm app composer require laravel/breeze --dev

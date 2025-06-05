@@ -11,17 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('promociones', function (Blueprint $table) {
+         Schema::create('novedades', function (Blueprint $table) {
             $table->id();
-            $table->string('texto');
+            $table->string('name');
             $table->string('email')->unique();
             $table->dateTime('fecha_desde')->nullable();
             $table->dateTime('fecha_hasta')->nullable();
-            $table->integer('id_categoria_cliente');
-            //revisar dia semana
-            $table->integer('id_estado_promocion');
-            $table->integer('id_local');
+            $table->foreignId('categoria_cliente_id')->constrained('categoria_clientes')->onDelete('cascade');
+            $table->timestamps();
         });
+
     }
 
     /**
@@ -29,7 +28,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-         Schema::table('promociones', function (Blueprint $table) {
+          Schema::table('novedades', function (Blueprint $table) {
             //
         });
     }

@@ -11,15 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create('novedades', function (Blueprint $table) {
+        Schema::create('locales', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('nombre');
+            $table->string('ubicacion');
             $table->dateTime('fecha_desde')->nullable();
             $table->dateTime('fecha_hasta')->nullable();
-            $table->integer('id_categoria_cliente');
+            $table->boolean('is_active')->default(true);
+            $table->timestamps();
+            //revisar dia semana
+            $table->foreignId('rubro_id')->constrained('rubros')->onDelete('cascade');
+            $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
         });
-
     }
 
     /**
@@ -27,7 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-          Schema::table('novedades', function (Blueprint $table) {
+         Schema::table('locales', function (Blueprint $table) {
             //
         });
     }
